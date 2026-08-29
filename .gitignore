@@ -1,0 +1,23 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Environment variables
+.env
+
+# Node
+node_modules/
+
+# Build files
+dist/
+
+# IDE
+.vscode/
+
+# OS
+.DS_Store
+
+# Database
+# Uncomment this if you decide not to upload the mock database
+# *.db
