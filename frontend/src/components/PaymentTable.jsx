@@ -50,7 +50,7 @@ function PaymentTable({ payments, setPayments, refreshPayments }) {
     setAnalysisError(null)
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/payments/analyze", {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/payments/analyze`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -112,7 +112,7 @@ function PaymentTable({ payments, setPayments, refreshPayments }) {
     }
 
     try {
-      const patchUrl = `http://127.0.0.1:8000/payments/${paymentId}`
+      const patchUrl = `${import.meta.env.VITE_API_URL}/payments/${paymentId}`
       const response = await fetch(
         patchUrl,
         {

@@ -15,7 +15,7 @@ function App() {
   const fetchPayments = async () => {
     try {
       setLoading(true)
-      const res = await fetch("http://127.0.0.1:8000/payments")
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/payments`)
       if (!res.ok) {
         throw new Error(`HTTP error! status: ${res.status}`)
       }
